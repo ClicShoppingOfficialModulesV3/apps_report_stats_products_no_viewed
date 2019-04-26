@@ -1,12 +1,13 @@
 <?php
-/*
- * BS.php
- * @copyright Copyright 2008 - http://www.innov-concept.com
- * @Brand : ClicShopping(Tm) at Inpi all right Reserved
- * @license GPL 2 License & MIT Licencse
- 
-   * http://clicshopping.no-ip.biz/clicshopping_test/boutique/ClicShoppingAdmin/index.php?A&Report\StatsProductsNoViewed&ActionConfigure&module=StatsProductsNoViewed
-*/
+/**
+ *
+ *  @copyright 2008 - https://www.clicshopping.org
+ *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
+ *  @Licence GPL 2 & MIT
+ *  @licence MIT - Portion of osCommerce 2.4
+ *  @Info : https://www.clicshopping.org/forum/trademark/
+ *
+ */
 
   namespace ClicShopping\Apps\Report\StatsProductsNoViewed\Module\ClicShoppingAdmin\Config\PN;
 

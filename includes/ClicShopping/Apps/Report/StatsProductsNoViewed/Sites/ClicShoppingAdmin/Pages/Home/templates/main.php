@@ -1,13 +1,20 @@
 <?php
-/*
- * main.php
- * @copyright Copyright 2008 - http://www.innov-concept.com
- * @Brand : ClicShopping(Tm) at Inpi all right Reserved
- * @license GPL 2 License & MIT Licencse
-*/
+/**
+ *
+ *  @copyright 2008 - https://www.clicshopping.org
+ *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
+ *  @Licence GPL 2 & MIT
+ *  @licence MIT - Portion of osCommerce 2.4
+ *  @Info : https://www.clicshopping.org/forum/trademark/
+ *
+ */
 
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\CLICSHOPPING;
+  use ClicShopping\OM\Registry;
+
+  $CLICSHOPPING_StatsProductsNoViewed = Registry::get('StatsProductsNoViewed');
+  $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
 
   if ($CLICSHOPPING_MessageStack->exists('StatsProductsNoViewed')) {
     echo $CLICSHOPPING_MessageStack->get('StatsProductsNoViewed');
@@ -42,7 +49,7 @@
             <div class="form-group">
               <div class="col-md-12">
 <?php
-  echo HTML::form('configure', CLICSHOPPING::link('index.php', 'A&Report\StatsProductsNoViewed&Configure'));
+  echo HTML::form('configure', CLICSHOPPING::link(null, 'A&Report\StatsProductsNoViewed&Configure'));
   echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_configure'), null, null, 'primary');
   echo '</form>';
 ?>

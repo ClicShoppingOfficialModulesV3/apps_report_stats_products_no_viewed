@@ -1,11 +1,13 @@
 <?php
-/*
-   * stats_products_no_viewed.php
-   * @copyright Copyright 2008 - http://www.innov-concept.com
-   * @Brand : ClicShopping(Tm) at Inpi all right Reserved
-   * @license GPL 2 License & MIT Licencse
-
-*/
+/**
+ *
+ *  @copyright 2008 - https://www.clicshopping.org
+ *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
+ *  @Licence GPL 2 & MIT
+ *  @licence MIT - Portion of osCommerce 2.4
+ *  @Info : https://www.clicshopping.org/forum/trademark/
+ *
+ */
 
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\CLICSHOPPING;
@@ -84,10 +86,10 @@
       }
       ?>
                 <tr onMouseOver="rowOverEffect(this)" onMouseOut="rowOutEffect(this)">
-                  <th scope="row" ><?php echo HTML::link(CLICSHOPPING::link('index.php', 'A&Catalog\Preview&Preview&pID=' . $Qproducts->valueInt('products_id') . '&origin=' . 'index.php?A&Report\StatsProductsNoViewed&StatsProductsNoViewed&page=' . $_GET['page']), HTML::image($CLICSHOPPING_Template->getImageDirectory() . '/icons/preview.gif', $CLICSHOPPING_StatsProductsNoViewed->getDef('text_image_preview'))); ?></th>
+                  <td scope="row" width="50px"><?php echo HTML::link(CLICSHOPPING::link(null, 'A&Catalog\Preview&Preview&pID=' . $Qproducts->valueInt('products_id') . '?page=' . $_GET['page']), HTML::image($CLICSHOPPING_Template->getImageDirectory() . 'icons/preview.gif', $CLICSHOPPING_StatsProductsNoViewed->getDef('text_image_preview'))); ?></td>
                   <td><?php echo  HTML::image($CLICSHOPPING_Template->getDirectoryShopTemplateImages() . $Qproducts->value('products_image'), $Qproducts->value('products_name'), (int)SMALL_IMAGE_WIDTH_ADMIN, (int)SMALL_IMAGE_HEIGHT_ADMIN); ?></td>
                   <td></td>
-                  <td><?php echo HTML::link(CLICSHOPPING::link('index.php', 'A&Catalog\Preview&Preview&pID=' . $Qproducts->valueInt('products_id') . '&origin=' . 'index.php?A&Report\StatsProductsNoViewed&StatsProductsNoViewed&page=' . $_GET['page']), $Qproducts->value('products_name')); ?></td>
+                  <td><?php echo HTML::link(CLICSHOPPING::link(null, 'A&Catalog\Preview&Preview&pID=' . $Qproducts->valueInt('products_id') . '&origin=' . 'index.php?A&Report\StatsProductsNoViewed&StatsProductsNoViewed&page=' . $_GET['page']), $Qproducts->value('products_name')); ?></td>
                   <td class="dataTableContent text-md-center"><?php echo $products['products_viewed']; ?>&nbsp;</td>
                 </tr>
 <?php

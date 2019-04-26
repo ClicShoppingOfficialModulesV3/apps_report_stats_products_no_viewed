@@ -1,17 +1,20 @@
 <?php
-/*
- * Configure.php
- * @copyright Copyright 2008 - http://www.innov-concept.com
- * @Brand : ClicShopping(Tm) at Inpi all right Reserved
- * @license GPL 2 License & MIT Licencse
- 
-*/
+/**
+ *
+ *  @copyright 2008 - https://www.clicshopping.org
+ *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
+ *  @Licence GPL 2 & MIT
+ *  @licence MIT - Portion of osCommerce 2.4
+ *  @Info : https://www.clicshopping.org/forum/trademark/
+ *
+ */
 
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\Registry;
-  use ClicShopping\OM\CLICSHOPPING;
 
   $CLICSHOPPING_StatsProductsNoViewed = Registry::get('StatsProductsNoViewed');
+  $CLICSHOPPING_MessageStack = Registry::get('MessageStack');
+
   $CLICSHOPPING_Page = Registry::get('Site')->getPage();
 
   $current_module = $CLICSHOPPING_Page->data['current_module'];
@@ -32,8 +35,6 @@
           <span class="col-md-4 pageHeading"><?php echo '&nbsp;' . $CLICSHOPPING_StatsProductsNoViewed->getDef('heading_title'); ?></span>
           <span class="col-md-7 text-md-right">
 <?php
-  echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_configure'), null, CLICSHOPPING::link('index.php', 'A&Report\StatsProductsNoViewed'),  'primary') . ' ';
-
   if ($CLICSHOPPING_StatsProductsNoViewed_Config->is_installed === true) {
     echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_stats_products_no_viewed'), null, $CLICSHOPPING_StatsProductsNoViewed->link('StatsProductsNoViewed'), 'success');
   }
