@@ -33,12 +33,7 @@
         <div class="row">
           <span class="col-md-1 logoHeading"><?php echo HTML::image($CLICSHOPPING_Template->getImageDirectory() . '/categories/stats_products_viewed.gif', $CLICSHOPPING_StatsProductsNoViewed->getDef('heading_title'), '40', '40'); ?></span>
           <span class="col-md-4 pageHeading"><?php echo '&nbsp;' . $CLICSHOPPING_StatsProductsNoViewed->getDef('heading_title'); ?></span>
-          <span class="col-md-7 text-md-right">
-<?php
-  if ($CLICSHOPPING_StatsProductsNoViewed_Config->is_installed === true) {
-    echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_stats_products_no_viewed'), null, $CLICSHOPPING_StatsProductsNoViewed->link('StatsProductsNoViewed'), 'success');
-  }
-?>
+          <span class="col-md-7 text-md-right"><?php echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_stats_products_no_viewed'), null, $CLICSHOPPING_StatsProductsNoViewed->link('StatsProductsNoViewed'), 'success'); ?></span>
         </div>
       </div>
     </div>
