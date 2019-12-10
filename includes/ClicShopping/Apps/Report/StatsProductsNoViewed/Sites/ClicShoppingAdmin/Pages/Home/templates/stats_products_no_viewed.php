@@ -19,7 +19,7 @@
   $CLICSHOPPING_StatsProductsNoViewed = Registry::get('StatsProductsNoViewed');
   $CLICSHOPPING_Page = Registry::get('Site')->getPage();
 
-  $page = (isset($_GET['page']) && is_numeric($_GET['page'])) ? $_GET['page'] : 1;
+  $page = (isset($_GET['page']) && is_numeric($_GET['page'])) ? (int)$_GET['page'] : 1;
 
   $rows = 0;
 ?>
