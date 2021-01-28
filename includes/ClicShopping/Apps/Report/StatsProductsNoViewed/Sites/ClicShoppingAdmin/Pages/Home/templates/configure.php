@@ -97,7 +97,7 @@
             echo HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_save'), null, null, 'success');
 
             if ($CLICSHOPPING_StatsProductsNoViewed->getConfigModuleInfo($current_module, 'is_uninstallable') === true) {
-              echo '<span class="float-md-right">' . HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_dialog_uninstall'), null, '#', 'warning', ['params' => 'data-toggle="modal" data-target="#ppUninstallModal"']) . '</span>';
+              echo '<span class="float-end">' . HTML::button($CLICSHOPPING_StatsProductsNoViewed->getDef('button_dialog_uninstall'), null, '#', 'warning', ['params' => 'data-toggle="modal" data-target="#ppUninstallModal"']) . '</span>';
             }
           ?>
         </div>
