@@ -27,14 +27,14 @@
       $this->title = $this->app->getDef('module_pv_title');
       $this->short_title = $this->app->getDef('module_pv_short_title');
       $this->introduction = $this->app->getDef('module_pv_introduction');
-      $this->is_installed = defined('CLICSHOPPING_APP_STATS_PRODUCTS_NO_VIEWED_PN_STATUS') && (trim(CLICSHOPPING_APP_STATS_PRODUCTS_NO_VIEWED_PN_STATUS) != '');
+      $this->is_installed = \defined('CLICSHOPPING_APP_STATS_PRODUCTS_NO_VIEWED_PN_STATUS') && (trim(CLICSHOPPING_APP_STATS_PRODUCTS_NO_VIEWED_PN_STATUS) != '');
     }
 
     public function install()
     {
       parent::install();
 
-      if (defined('MODULE_MODULES_STATS_PRODUCTS_NO_VIEWED_INSTALLED')) {
+      if (\defined('MODULE_MODULES_STATS_PRODUCTS_NO_VIEWED_INSTALLED')) {
         $installed = explode(';', MODULE_MODULES_STATS_PRODUCTS_NO_VIEWED_INSTALLED);
       }
 
