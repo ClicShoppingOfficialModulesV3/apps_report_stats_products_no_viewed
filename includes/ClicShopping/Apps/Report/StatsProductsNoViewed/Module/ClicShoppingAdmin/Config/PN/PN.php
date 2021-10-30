@@ -19,7 +19,7 @@
 
     protected $pm_code = 'stats_products_no_viewed';
 
-    public $is_uninstallable = true;
+    public bool $is_uninstallable = true;
     public $sort_order = 400;
 
     protected function init()
